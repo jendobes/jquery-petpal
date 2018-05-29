@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_30_164715) do
+ActiveRecord::Schema.define(version: 2018_05_29_224443) do
 
   create_table "owners", force: :cascade do |t|
     t.string "name"
@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 2018_04_30_164715) do
     t.string "breed"
     t.integer "age"
     t.text "bio"
-    t.integer "zip_code"
     t.boolean "kill_shelter"
     t.boolean "fosterer"
     t.boolean "adopter"
@@ -42,6 +41,7 @@ ActiveRecord::Schema.define(version: 2018_04_30_164715) do
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
+    t.integer "shelter_id"
   end
 
   create_table "rescues", force: :cascade do |t|
@@ -49,6 +49,15 @@ ActiveRecord::Schema.define(version: 2018_04_30_164715) do
     t.integer "pet_id"
     t.text "story"
     t.boolean "adoption"
+  end
+
+  create_table "shelters", force: :cascade do |t|
+    t.string "name"
+    t.string "website"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
   end
 
 end
