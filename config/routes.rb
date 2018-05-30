@@ -9,6 +9,10 @@ Rails.application.routes.draw do
     resources :rescues, only: [:new, :create]
   end
 
+  resources :shelters, only: [:index, :show] do
+    resources :pets, only: [:index, :show]
+  end
+
   resources :rescues, only: [:index]
 
   get '/signin', to: 'sessions#new', as: 'signin'
