@@ -3,3 +3,15 @@
 
 rails s -b 'ssl://localhost:3000?key=/Users/jenniferdobak/petpal/localhost.key&cert=/Users/jenniferdobak/petpal/localhost.crt'
 pkill -9 -f puma
+
+
+REQUIREMENT
+1
+2) sift through the animals in a specific shelter with the next button
+3
+4) create a rescue story, append that rescue story to success stories page.
+5
+
+TODO:
+* add back in .env file
+* link pet to shelter in _form partial and view
